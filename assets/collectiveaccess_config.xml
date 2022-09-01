@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="profile.xsd" useForConfiguration="1" base="base" infoUrl="">
   <profileName>collectiveaccess</profileName>
-  <profileDescription>Profile created on July 30 2022 at 15:04:53 by CollectiveAccess Administrator</profileDescription>
+  <profileDescription>Profile created on September 1 2022 at 15:52:35 by CollectiveAccess Administrator</profileDescription>
   <locales>
     <locale lang="en" country="US">English</locale>
     <locale lang="fr" country="FR">Français</locale>
@@ -12,7 +12,7 @@
     <locale lang="fr" country="CA" dontUseForCataloguing="1">Français (Canadien)</locale>
     <locale lang="cs" country="CZ" dontUseForCataloguing="1">Czech</locale>
     <locale lang="el" country="GR" dontUseForCataloguing="1">Greek</locale>
-    <locale lang="es" country="ES" dontUseForCataloguing="1">Español</locale>
+    <locale lang="es" country="ES">Español</locale>
     <locale lang="it" country="IT" dontUseForCataloguing="1">Italiano</locale>
     <locale lang="nl" country="NL" dontUseForCataloguing="1">Nederlands</locale>
     <locale lang="sr" country="RS" dontUseForCataloguing="1">Serbian</locale>
@@ -3000,702 +3000,6 @@
     </list>
   </lists>
   <elementSets>
-    <metadataElement code="set_description" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Introduction</name>
-          <description>Narrative description for set. This is the primary text used when publicly presenting the set.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Introduction</name>
-          <description>Narrative description for set. This is the primary text used when publicly presenting the set.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Introduction</name>
-          <description>Description narrative pour l'ensemble. Il s'agit du texte principal utilisé lors d'un affichage public de l'élément.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Introduktion</name>
-          <description>Berättande beskrivning, för gruppering. Detta är den primära texten som används när grupperingen visas offentligt.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">6</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_sets</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">3</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="set_item_description" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Item description</name>
-          <description>Narrative description for item in this set. This is the primary text used when publicly presenting the item in the context of this set.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Item description</name>
-          <description>Narrative description for item in this set. This is the primary text used when publicly presenting the item in the context of this set.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Description de l'objet</name>
-          <description>Description narrative pour un élément de cet ensemble. Il s'agit du texte principal utilisé lors d'un affichage public d'un élément dans le contexte de cet ensemble.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Post beskrivning</name>
-          <description>Berättande beskrivning för poster i denna gruppering. Detta är den primära texten som används när poster i grupperingen visas offentligt.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">6</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_set_items</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">3</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="set_presentation_type" datatype="List" list="set_presentation_types">
-      <labels>
-        <label locale="en_US">
-          <name>Presentation type</name>
-          <description>Determines how set is rendered when displayed to the public in the Pawtucket/Pawtucket2 front-end.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Presentation type</name>
-          <description>Determines how set is rendered when displayed to the public in the Pawtucket/Pawtucket2 front-end.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Type de présentation</name>
-          <description>Détermine comment l'ensemble est affiché dans le catalogue public Pawtucket/Pawtucket2.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Presentation typ</name>
-          <description>Bestämmer hur gruppering återges när den visas för allmänheten i Pawtucket/Pawtucket2 front-end.</description>
-        </label>
-      </labels>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_sets</table>
-          <type>public_presentation</type>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="set_item_is_primary" datatype="List" list="set_item_is_primary">
-      <labels>
-        <label locale="en_US">
-          <name>Is primary item for set?</name>
-          <description>The item marked as primary will be used to represent the set as a whole when included in a list of sets.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Is primary item for set?</name>
-          <description>The item marked as primary will be used to represent the set as a whole when included in a list of sets.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Est l'item principal de l'ensemble ?</name>
-          <description>L'item marqué comme principal sera utilisé pour représenter l'ensemble comme un tout dans l'affichage d'une liste d'ensembles.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Är det primära objektet för gruppering?</name>
-          <description>Objekt markerad som primär kommer att användas för att representera grupperingen i sin helhet när det ingår i en lista över grupperingar.</description>
-        </label>
-      </labels>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_set_items</table>
-          <type>public_presentation</type>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="set_chron_date_element_code" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Chronology element code</name>
-          <description>Element code of date range element to be used when placing set items into chronological order.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Chronology element code</name>
-          <description>Element code of date range element to be used when placing set items into chronological order.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Code de période</name>
-          <description>Code d'une plage de dates à utiliser lorsque les items sont affichés en ordre chronologique.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Kronologi elementkod</name>
-          <description>Elementkoden för datumintervall element som användas för att placera in föremål i kronologisk ordning.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_sets</table>
-          <type>public_presentation</type>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="loan_authorization_date" datatype="DateRange">
-      <labels>
-        <label locale="en_US">
-          <name>Authorization date</name>
-          <description>The date when the loan was authorized.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Authorization date</name>
-          <description>The date when the loan was authorized.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Date d'autorisation</name>
-          <description>La date à laquelle le prêt a été autorisé.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Datum för godkännande</name>
-          <description>Det datum då lånet beviljades.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_loans</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="loan_in_date" datatype="DateRange">
-      <labels>
-        <label locale="en_US">
-          <name>Loan in date</name>
-          <description>The date a loan will enter the institution.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Loan in date</name>
-          <description>The date a loan will enter the institution.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Prêt planifié</name>
-          <description>La date où un prêt rejoindra l'institution.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Inlåningsdatum</name>
-          <description>Datumet ett lån kommer till institutionen.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_loans</table>
-          <type>in</type>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="loan_out_date" datatype="DateRange">
-      <labels>
-        <label locale="en_US">
-          <name>Loan out date</name>
-          <description>The date a loan will enter the institution.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Loan out date</name>
-          <description>The date a loan will enter the institution.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Date de prêt</name>
-          <description>La date à laquelle un prêt entrera dans l'institution.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Utlåningsdatum</name>
-          <description>Datumet ett lån kommer till institutionen.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_loans</table>
-          <type>out</type>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="loan_return_date" datatype="DateRange">
-      <labels>
-        <label locale="en_US">
-          <name>Loan return date</name>
-          <description>The date a loan is due back to the lending institution.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Loan return date</name>
-          <description>The date a loan is due back to the lending institution.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Date de retour de prêt</name>
-          <description>La date à laquelle le prêt doit être retourné à l'institution prêtante.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Lån återlämningsdatum</name>
-          <description>Datumet ett lån kommer tillbaka till det långivande institutet.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_loans</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="loan_renewal_date" datatype="DateRange">
-      <labels>
-        <label locale="en_US">
-          <name>Loan renewal application date</name>
-          <description>The date to apply for a renewal to the loan.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Loan renewal application date</name>
-          <description>The date to apply for a renewal to the loan.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Date du renouvellement de prêt</name>
-          <description>La date de réalisation du renouvellement du prêt.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Lån förnyelse ansökningsdag</name>
-          <description>Datumet att ansöka om förnyelse för lånet.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_loans</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="loan_conditions" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Loan conditions</name>
-          <description>A statement of the conditions on a loan.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Loan conditions</name>
-          <description>A statement of the conditions on a loan.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Conditions de prêt</name>
-          <description>Un rappel des conditions du prêt.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Lånevillkor</name>
-          <description>En redogörelse för villkoren på ett lån.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">3</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_loans</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="loan_note" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Loan note</name>
-          <description>General information about the loan.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Loan note</name>
-          <description>General information about the loan.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Note sur le prêt</name>
-          <description>Informations générales sur le prêt.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Lån anteckning</name>
-          <description>Allmän information om lånet.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">3</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_loans</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="loan_purpose" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Loan purpose</name>
-          <description>General information about the purpose of loan.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Loan purpose</name>
-          <description>General information about the purpose of loan.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Proposition de prêt</name>
-          <description>Information générale sur la proposition de prêt.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Lån syfte</name>
-          <description>Allmän information om syftet med lånet.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">3</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_loans</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="movement_method" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Movement method</name>
-          <description>The method used in the movement of an object.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Movement method</name>
-          <description>The method used in the movement of an object.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Méthode de mouvement</name>
-          <description>La méthode utilisée pour le mouvement d'un objet.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Förflyttningsmetod</name>
-          <description>Den metod som används i förflyttningen av ett objekt.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="movement_note" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Movement note</name>
-          <description>Additional information about the movement of an object or group of objects.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Movement note</name>
-          <description>Additional information about the movement of an object or group of objects.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Note de mouvement</name>
-          <description>Informations additionnelles à propos du mouvement de l'objet ou d'un groupe d'objets.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Förflyttning anteckning</name>
-          <description>Ytterligare information om förflyttning av ett objekt eller en grupp av objekt.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="planned_removal_date" datatype="DateRange">
-      <labels>
-        <label locale="en_US">
-          <name>Planned removal date</name>
-          <description>The date an object is to be removed from its current location.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Planned removal date</name>
-          <description>The date an object is to be removed from its current location.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Date de retrait prévu</name>
-          <description>La date où l'objet doit être retiré de sa localisation actuelle.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Planerad borttagningsdatum</name>
-          <description>Datumet ett objekt ska tas bort från sin nuvarande plats.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="removal_date" datatype="DateRange">
-      <labels>
-        <label locale="en_US">
-          <name>Planned removal date</name>
-          <description>The date an object was actually removed from its current location.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Planned removal date</name>
-          <description>The date an object was actually removed from its current location.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Plage de retrait prévu</name>
-          <description>Les dates auxquelles l'objet a été actuellement retiré de sa localisation actuelle.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Planerat borttagningsdatum</name>
-          <description>Datumet ett föremål faktiskt togs bort från dess nuvarande plats.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="movement_reason" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Reason for move</name>
-          <description>The purpose or reason for the movement of the object or group of objects.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Reason for move</name>
-          <description>The purpose or reason for the movement of the object or group of objects.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Raison du mouvement</name>
-          <description>Le motif ou la raison du mouvement de l'objet ou du groupe d'objets.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Orsak till flytt</name>
-          <description>Syftet eller skäl för förflyttning av objekt eller en grupp av objekt.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="tour_description" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Introduction</name>
-          <description>Narrative description for tour. This is the primary text used when publicly presenting the tour.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Introduction</name>
-          <description>Narrative description for tour. This is the primary text used when publicly presenting the tour.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Introduction</name>
-          <description>Narrative description for tour. This is the primary text used when publicly presenting the tour.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Inledning</name>
-          <description>Berättande beskrivning av turen. Detta är den primära texten som används när turen presenteras.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">6</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_tours</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">3</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="tour_stop_description" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Introduction</name>
-          <description>Narrative description for tour stop. This is the primary text used when publicly presenting the stop.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Introduction</name>
-          <description>Narrative description for tour stop. This is the primary text used when publicly presenting the stop.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Introduction</name>
-          <description>Narrative description for tour stop. This is the primary text used when publicly presenting the stop.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Inledning</name>
-          <description>Berättande beskrivning av turen. Detta är den primära texten som används när turen presenteras.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">6</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_tour_stops</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">3</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="tour_stop_georeference" datatype="Geocode">
-      <labels>
-        <label locale="en_US">
-          <name>Georeference</name>
-          <description>Location of this stop.</description>
-        </label>
-        <label locale="en_CA">
-          <name>Georeference</name>
-          <description>Location of this stop.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Georeference</name>
-          <description>Location of this stop.</description>
-        </label>
-        <label locale="sv_SE">
-          <name>Georeferens</name>
-          <description>Plats för detta stopp.</description>
-        </label>
-      </labels>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_tour_stops</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
     <metadataElement code="description" datatype="Text">
       <labels>
         <label locale="en_US">
@@ -3762,48 +3066,6 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <metadataElement code="description_source" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Source of description</name>
-          <description>Source of item description. This should be a formal citation if possible. For informal sources a narrative description is acceptable.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Source de la description</name>
-          <description>Source de la description de l'item. Ceci doit être si possible une citation formelle. Pour des sources informelles une simple description est acceptable.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">90</setting>
-        <setting name="fieldHeight">3</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_places</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_collections</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
     <metadataElement code="date" datatype="Container">
       <labels>
         <label locale="en_US">
@@ -3849,127 +3111,7 @@
           <table>ca_objects</table>
           <settings>
             <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_entities</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_collections</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="caption" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Caption</name>
-          <description>Short descriptive caption for item.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Légende</name>
-          <description>Courte légende descriptive de l'item.</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">90</setting>
-        <setting name="fieldHeight">2</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_object_representations</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_representation_annotations</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_set_items</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="lcsh_terms" datatype="LCSH">
-      <labels>
-        <label locale="en_US">
-          <name>Library of Congress Subject Headings</name>
-          <description>Library of Congress Subject headings describing this object. To add a new heading simply type the first few letters of the heading and choose the desired one from the displayed list of possible matches.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Vedettes matières de la Bibliothèque du Congrès (Library of Congress Subject Headings)</name>
-          <description>Vedettes matières s'appliquant à l'objet. Pour ajouter une nouvelle vedette matière saisir simplement les premières lettres de la vedette et en sélectionner une parmi la liste des réponses disponibles.</description>
-        </label>
-      </labels>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_entities</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_places</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_collections</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
+            <setting name="maxAttributesPerRow">5</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -4083,221 +3225,6 @@
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1000</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="internal_notes" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Notes (internal use only)</name>
-          <description>Notes regarding item or event</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Notes (usage interne uniquement)</name>
-          <description>Notes à propos de l'item ou de l'événement</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">90</setting>
-        <setting name="fieldHeight">4</setting>
-        <setting name="doesNotTakeLocale">1</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_entities</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_places</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_collections</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_storage_locations</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="geonames" datatype="GeoNames">
-      <labels>
-        <label locale="en_US">
-          <name>GeoNames</name>
-          <description>A Geographic lookup that takes search text, passes it to the GeoNames search service and provides a dropdown with search results (ordered by score). Selected geoname is stored as both text (name, country, continent and ID) and the service URL identifier.</description>
-        </label>
-        <label locale="fr_FR">
-          <name>GeoName</name>
-          <description>Une recherche géographique qui prend une recherche texte, la relaie auprès du service de recherche GeoNames et fournit une liste déroulante avec les résultats de recherche (triés par pertinence). Le GeoName sélectionné est stocké à la fois comme texte (nom, pays, continent et ID) et sous la forme de l'URL du service.</description>
-        </label>
-      </labels>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_places</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_entities</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_collections</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_storage_locations</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="georeference" datatype="Geocode">
-      <labels>
-        <label locale="en_US">
-          <name>Georeference</name>
-          <description>Coordinates documenting the location of the item</description>
-        </label>
-        <label locale="fr_FR">
-          <name>Géoréférence</name>
-          <description>Coordonnées de la localisation de l'item</description>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">60</setting>
-        <setting name="fieldHeight">1</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_places</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_entities</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_collections</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_storage_locations</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">100</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="condition" datatype="List" list="conditions">
-      <labels>
-        <label locale="en_US">
-          <name>Condition</name>
-        </label>
-        <label locale="fr_FR">
-          <name>Condition</name>
-        </label>
-      </labels>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -5475,7 +4402,7 @@
           <type>document</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">5</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -5494,7 +4421,7 @@
           <type>document</type>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">5</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -5522,8 +4449,8 @@
     <metadataElement code="objectcoverage" datatype="Text">
       <labels>
         <label locale="en_US">
-          <name>Coverage</name>
-          <description>The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</description>
+          <name>Location</name>
+          <description>The spatial topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</description>
         </label>
       </labels>
       <typeRestrictions>
@@ -7443,23 +6370,35 @@
                 <setting name="usewysiwygeditor"/>
               </settings>
             </placement>
-            <placement code="idno">
-              <bundle>idno</bundle>
+            <placement code="ca_attribute_objectsubject3">
+              <bundle>ca_attribute_objectsubject</bundle>
               <settings>
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">bubbles</setting>
                 <setting name="expand_collapse_no_value">bubbles</setting>
-                <setting name="usewysiwygeditor"/>
+                <setting name="sort">1</setting>
+                <setting name="sortDirection">ASC</setting>
               </settings>
-            </placement>
-            <placement code="ca_attribute_objectsubject3">
-              <bundle>ca_attribute_objectsubject</bundle>
             </placement>
             <placement code="ca_attribute_objectcreator4">
               <bundle>ca_attribute_objectcreator</bundle>
+              <settings>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">bubbles</setting>
+                <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="sort">1</setting>
+                <setting name="sortDirection">ASC</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_description5">
               <bundle>ca_attribute_description</bundle>
+              <settings>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">bubbles</setting>
+                <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="sort">1</setting>
+                <setting name="sortDirection">ASC</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_date">
               <bundle>ca_attribute_date</bundle>
@@ -7473,15 +6412,43 @@
             </placement>
             <placement code="ca_attribute_objectcoverage7">
               <bundle>ca_attribute_objectcoverage</bundle>
+              <settings>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">bubbles</setting>
+                <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="sort">1</setting>
+                <setting name="sortDirection">ASC</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_objectlanguage4">
               <bundle>ca_attribute_objectlanguage</bundle>
+              <settings>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">bubbles</setting>
+                <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="sort">1</setting>
+                <setting name="sortDirection">ASC</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_objectformat8">
               <bundle>ca_attribute_objectformat</bundle>
+              <settings>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">bubbles</setting>
+                <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="sort">1</setting>
+                <setting name="sortDirection">ASC</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_file4">
               <bundle>ca_attribute_file</bundle>
+              <settings>
+                <setting name="readonly"/>
+                <setting name="expand_collapse_value">bubbles</setting>
+                <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="sort">1</setting>
+                <setting name="sortDirection">ASC</setting>
+              </settings>
             </placement>
             <placement code="ca_attribute_external_link">
               <bundle>ca_attribute_external_link</bundle>
@@ -9426,6 +8393,7 @@
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">bubbles</setting>
                 <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="usewysiwygeditor"/>
               </settings>
             </placement>
             <placement code="editor_code">
@@ -9434,6 +8402,7 @@
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">bubbles</setting>
                 <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="usewysiwygeditor"/>
               </settings>
             </placement>
             <placement code="color">
@@ -9442,6 +8411,7 @@
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">bubbles</setting>
                 <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="usewysiwygeditor"/>
               </settings>
             </placement>
             <placement code="editor_type">
@@ -9524,6 +8494,7 @@
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">bubbles</setting>
                 <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="usewysiwygeditor"/>
               </settings>
             </placement>
             <placement code="idno">
@@ -9532,6 +8503,7 @@
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">bubbles</setting>
                 <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="usewysiwygeditor"/>
               </settings>
             </placement>
             <placement code="color">
@@ -9540,6 +8512,7 @@
                 <setting name="readonly"/>
                 <setting name="expand_collapse_value">bubbles</setting>
                 <setting name="expand_collapse_no_value">bubbles</setting>
+                <setting name="usewysiwygeditor"/>
               </settings>
             </placement>
             <placement code="is_default">
